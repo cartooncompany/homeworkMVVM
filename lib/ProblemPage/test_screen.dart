@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qintproject/ProblemPage/result_screen.dart';
 
@@ -42,7 +43,7 @@ class _TestScreenState extends State<TestScreen> {
             ),
             Container(
               width: 400,
-              height: 83,
+              height: 75,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -59,7 +60,7 @@ class _TestScreenState extends State<TestScreen> {
             ),
             Container(
               width: 400,
-              height: 83,
+              height: 75,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -75,7 +76,7 @@ class _TestScreenState extends State<TestScreen> {
             ),
             Container(
               width: 400,
-              height: 83,
+              height: 75,
               decoration: BoxDecoration(
                 color: const Color(0xffC7FFEF),
                 borderRadius: BorderRadius.circular(15),
@@ -91,7 +92,7 @@ class _TestScreenState extends State<TestScreen> {
             ),
             Container(
               width: 400,
-              height: 83,
+              height: 75,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -107,17 +108,19 @@ class _TestScreenState extends State<TestScreen> {
         ),
       ),
       bottomSheet: Padding(
-        padding: const EdgeInsets.all(13.0),
+        padding: const EdgeInsets.all(30.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
+                iconSize: 35,
                 onPressed: () {
                   Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ));
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
                 },
                 icon: const Icon(Icons.home)),
             ElevatedButton(
@@ -130,7 +133,7 @@ class _TestScreenState extends State<TestScreen> {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                     builder: (context) => const ResultScreen(),
                   ),
                 );
