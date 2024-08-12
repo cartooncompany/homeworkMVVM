@@ -12,6 +12,8 @@ class ResultScreen extends StatefulWidget {
 }
 
 class _ResultScreenState extends State<ResultScreen> {
+  final int _counter = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +36,9 @@ class _ResultScreenState extends State<ResultScreen> {
                 style: TextStyle(fontSize: 20),
               ),
             ),
-            const Text(
-              "01/15",
-              style: TextStyle(fontSize: 20),
+            Text(
+              "$_counter/15",
+              style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(
               height: 75,
@@ -50,9 +52,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                "답 1",
-                style: TextStyle(fontSize: 20),
-              )),
+                    "답 1",
+                    style: TextStyle(fontSize: 20),
+                  )),
             ),
             const SizedBox(
               height: 15,
@@ -66,9 +68,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                "답 2",
-                style: TextStyle(fontSize: 20),
-              )),
+                    "답 2",
+                    style: TextStyle(fontSize: 20),
+                  )),
             ),
             const SizedBox(
               height: 15,
@@ -83,9 +85,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                "답 3",
-                style: TextStyle(fontSize: 20),
-              )),
+                    "답 3",
+                    style: TextStyle(fontSize: 20),
+                  )),
             ),
             const SizedBox(
               height: 15,
@@ -183,7 +185,7 @@ class _ResultScreenState extends State<ResultScreen> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const HomeScreen(),
+                                          const HomeScreen(),
                                         ),
                                       );
                                     },
@@ -208,7 +210,7 @@ class _ResultScreenState extends State<ResultScreen> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const MypageScreen(),
+                                          const MypageScreen(),
                                         ),
                                       );
                                     },
