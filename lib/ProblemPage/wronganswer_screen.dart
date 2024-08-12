@@ -13,91 +13,86 @@ class _WrongAnswerScreenState extends State<WrongAnswerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(13),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 40,
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 75,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 400,
+              height: 250,
+              decoration: BoxDecoration(
+                color: const Color(0xffE4F9F3),
+                borderRadius: BorderRadius.circular(15),
               ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                width: 400,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: const Color(0xffE4F9F3),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Text(
-                  "문제 설명",
+              child: const Text(
+                "문제 설명",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 400,
+              height: 75,
+              decoration: BoxDecoration(
+                border: Border.all(width: 3, color: const Color(0xff68F665)),
+                color: const Color(0xffE4F9F3),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Center(
+                child: Text(
+                  "맞은 문제",
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              const SizedBox(
-                height: 20,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 400,
+              height: 75,
+              decoration: BoxDecoration(
+                border: Border.all(width: 3, color: const Color(0xffFF3951)),
+                color: const Color(0xffE4F9F3),
+                borderRadius: BorderRadius.circular(15),
               ),
-              Container(
-                width: 400,
-                height: 75,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: const Color(0xff68F665)),
-                  color: const Color(0xffE4F9F3),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Center(
-                  child: Text(
-                    "맞은 문제",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 400,
-                height: 75,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: const Color(0xffFF3951)),
-                  color: const Color(0xffE4F9F3),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Center(
-                  child: Text(
-                    "틀린 문제",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                width: 400,
-                height: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xffE4F9F3),
-                ),
-                child: const Text(
-                  "해설해설해설해설해설해설해설",
+              child: const Center(
+                child: Text(
+                  "틀린 문제",
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              const SizedBox(
-                height: 150,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 400,
+              height: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: const Color(0xffE4F9F3),
               ),
-            ],
-          ),
+              child: const Text(
+                "해설해설해설해설해설해설해설",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
         ),
       ),
       bottomSheet: Padding(
-        padding: const EdgeInsets.all(13.0),
+        padding: const EdgeInsets.all(30.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
+              iconSize: 33,
                 onPressed: () {
                   Navigator.pushReplacement(
                       context,
