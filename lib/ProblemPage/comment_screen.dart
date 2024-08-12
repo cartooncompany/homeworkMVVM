@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../MainPage/home_screen.dart';
@@ -88,10 +89,11 @@ class _CommentScreenState extends State<CommentScreen> {
             IconButton(
                 onPressed: () {
                   Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ));
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                  );
                 },
                 icon: const Icon(Icons.home)),
             ElevatedButton(
