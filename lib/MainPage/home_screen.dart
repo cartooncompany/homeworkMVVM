@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qintproject/ProblemPage/test_screen.dart';
 import 'mypage_screen.dart';
@@ -13,28 +14,44 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Q-int",
-          style: TextStyle(fontSize: 30),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(75),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            AppBar(
+              title: const Padding(
+                padding: EdgeInsets.all(13.5),
+                child: Text(
+                  "Q-int",
+                  style: TextStyle(fontSize: 35),
+                ),
+              ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.all(13.5),
+                  child: IconButton(
+                      iconSize: 40,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const MypageScreen(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.person)),
+                )
+              ],
+              backgroundColor: Colors.white,
+            ),
+          ],
         ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MypageScreen(),
-                    ));
-              },
-              icon: const Icon(Icons.person))
-        ],
-        backgroundColor: Colors.white,
       ),
       body: Column(
         children: [
           const SizedBox(
-            height: 30,
+            height: 45,
           ),
           Center(
             child: SizedBox(
@@ -46,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 400,
                     height: 85,
                     decoration: BoxDecoration(
-                      border: Border.all(width: 3 , color: const Color(0xff00EDA6)),
+                        border: Border.all(
+                            width: 3, color: const Color(0xff00EDA6)),
                         color: const Color(0xffC7FFEF),
                         borderRadius: BorderRadius.circular(10)),
                   ),
@@ -200,7 +218,7 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(
+              CupertinoPageRoute(
                 builder: (context) => const TestScreen(),
               ),
             );
