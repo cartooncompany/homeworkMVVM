@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qintproject/LoginPage/login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -15,24 +16,25 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(
-            height: 100,
+          SizedBox(
+            height: 70.h,
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "회원가입",
-                style: TextStyle(color: Color(0xff00EDA6), fontSize: 50),
+                style: TextStyle(color: const Color(0xff00EDA6), fontSize: 43.w),
               ),
             ],
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           Container(
             //이메일
-            width: 400,
+            width: 345.w,
+            height: 52.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
             ),
@@ -51,18 +53,15 @@ class _SignupScreenState extends State<SignupScreen> {
               controller: TextEditingController(),
             ),
           ),
-          const SizedBox(
-            height: 30,
-          ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff00EDA6),
-                      minimumSize: const Size(50, 45),
+                      minimumSize: Size(66.w, 32.h),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),
@@ -77,7 +76,8 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
           ),
           SizedBox(
-            width: 400,
+            width: 345.w,
+            height: 52.h,
             child: TextField(
               decoration: const InputDecoration(
                   border: InputBorder.none,
@@ -91,11 +91,12 @@ class _SignupScreenState extends State<SignupScreen> {
               controller: TextEditingController(),
             ),
           ),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 17.h,
           ),
           Container(
-            width: 400,
+            width: 345.w,
+            height: 52.h,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             child: TextField(
               decoration: const InputDecoration(
@@ -111,11 +112,12 @@ class _SignupScreenState extends State<SignupScreen> {
               controller: TextEditingController(),
             ),
           ),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 17.h,
           ),
           SizedBox(
-            width: 400,
+            width: 345.w,
+            height: 52.h,
             child: TextField(
               decoration: const InputDecoration(
                 border: InputBorder.none,
@@ -130,13 +132,13 @@ class _SignupScreenState extends State<SignupScreen> {
               controller: TextEditingController(),
             ),
           ),
-          const SizedBox(
-            height: 270,
+          SizedBox(
+            height: 198.h,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xff00EDA6),
-              minimumSize: const Size(400, 52),
+              minimumSize: Size(345.w, 52.h),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -154,13 +156,13 @@ class _SignupScreenState extends State<SignupScreen> {
               style: TextStyle(fontSize: 16, color: Color(0xffFFFFFF)),
             ),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 7.h,
           ),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xffE4F9F3),
-                minimumSize: const Size(400, 52),
+                minimumSize: Size(345.w, 52.h),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8)),
               ),
