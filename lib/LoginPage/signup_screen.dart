@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:qintproject/LoginPage/login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -20,7 +22,7 @@ class _SignupScreenState extends State<SignupScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Sign Up",
+                "회원가입",
                 style: TextStyle(color: Color(0xff00EDA6), fontSize: 50),
               ),
             ],
@@ -38,7 +40,6 @@ class _SignupScreenState extends State<SignupScreen> {
               decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "이메일",
-                hintText: "이메일을 입력하세요.",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
                 labelStyle: TextStyle(color: Color(0xffB4B4B4)),
@@ -59,17 +60,19 @@ class _SignupScreenState extends State<SignupScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff00EDA6),
-                    minimumSize: const Size(50, 45),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff00EDA6),
+                      minimumSize: const Size(50, 45),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
                     ),
-                  ),
                     onPressed: () {
                       print("인증코드 발송");
                     },
-                    child: const Text("Send", style: TextStyle(fontSize: 20, color: Color(0xffFFFFFF)),)),
+                    child: const Text(
+                      "Send",
+                      style: TextStyle(fontSize: 20, color: Color(0xffFFFFFF)),
+                    )),
               ],
             ),
           ),
@@ -77,16 +80,14 @@ class _SignupScreenState extends State<SignupScreen> {
             width: 400,
             child: TextField(
               decoration: const InputDecoration(
-                border: InputBorder.none,
-                labelText: "인증번호",
-                hintText: "인증번호를 입력해주세요",
-                filled: true,
-                fillColor: Color(0xffF4F4F4),
-                labelStyle: TextStyle(color: Color(0xffB4B4B4)),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                )
-              ),
+                  border: InputBorder.none,
+                  labelText: "인증번호",
+                  filled: true,
+                  fillColor: Color(0xffF4F4F4),
+                  labelStyle: TextStyle(color: Color(0xffB4B4B4)),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  )),
               controller: TextEditingController(),
             ),
           ),
@@ -100,7 +101,6 @@ class _SignupScreenState extends State<SignupScreen> {
               decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "비밀번호",
-                hintText: "비밀번호를 입력하세요.",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
                 labelStyle: TextStyle(color: Color(0xffB4B4B4)),
@@ -120,7 +120,6 @@ class _SignupScreenState extends State<SignupScreen> {
               decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "비밀번호 재입력",
-                hintText: "비밀번호를 다시 입력해주세요",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
                 labelStyle: TextStyle(color: Color(0xffB4B4B4)),
@@ -143,7 +142,12 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const LoginScreen(),
+                ),
+              );
             },
             child: const Text(
               "회원가입",
@@ -161,7 +165,12 @@ class _SignupScreenState extends State<SignupScreen> {
                     borderRadius: BorderRadius.circular(8)),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pushReplacement(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                );
               },
               child: const Text(
                 "로그인하러 가기",
