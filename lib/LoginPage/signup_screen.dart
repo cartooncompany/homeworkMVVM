@@ -178,8 +178,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 "로그인하러 가기",
                 style: TextStyle(fontSize: 16, color: Color(0xff00EDA6)),
               )),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
         ],
       ),
