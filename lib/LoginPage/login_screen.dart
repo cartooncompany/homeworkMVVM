@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qintproject/LoginPage/signup_screen.dart';
 
@@ -11,6 +12,22 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final FocusNode _focusNode = FocusNode();
+
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Login",
+                "로그인",
                 style: TextStyle(color: Color(0xff00EDA6), fontSize: 50),
               ),
             ],
@@ -37,7 +54,6 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "이메일",
-                hintText: "이메일을 입력하세요.",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
                 labelStyle: TextStyle(color: Color(0xffB4B4B4)),
@@ -61,15 +77,17 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "비밀번호",
-                hintText: "비밀번호를 입력하세요.",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
-                labelStyle: TextStyle(color: Color(0xffB4B4B4)),
+                hoverColor: Colors.white,
+                labelStyle: TextStyle(
+                  color: Color(0xffB4B4B4),
+                ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
               ),
-              controller: TextEditingController(),
+              controller: _controller,
             ),
           ),
           const SizedBox(
@@ -84,7 +102,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             onPressed: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ),
+              );
             },
             child: const Text(
               "로그인",
@@ -102,11 +125,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(8)),
               ),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return const SignupScreen();
-                  },
-                ));
+                Navigator.pushReplacement(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => const SignupScreen(),
+                    ));
               },
               child: const Text(
                 "회원가입하러 가기",
