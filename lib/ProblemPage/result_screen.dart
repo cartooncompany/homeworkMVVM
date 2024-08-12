@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qintproject/MainPage/mypage_screen.dart';
 import 'package:qintproject/ProblemPage/comment_screen.dart';
@@ -52,9 +53,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                    "답 1",
-                    style: TextStyle(fontSize: 20),
-                  )),
+                "답 1",
+                style: TextStyle(fontSize: 20),
+              )),
             ),
             const SizedBox(
               height: 15,
@@ -68,9 +69,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                    "답 2",
-                    style: TextStyle(fontSize: 20),
-                  )),
+                "답 2",
+                style: TextStyle(fontSize: 20),
+              )),
             ),
             const SizedBox(
               height: 15,
@@ -85,9 +86,9 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
               child: const Center(
                   child: Text(
-                    "답 3",
-                    style: TextStyle(fontSize: 20),
-                  )),
+                "답 3",
+                style: TextStyle(fontSize: 20),
+              )),
             ),
             const SizedBox(
               height: 15,
@@ -111,11 +112,12 @@ class _ResultScreenState extends State<ResultScreen> {
         ),
       ),
       bottomSheet: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(30.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
+              iconSize: 35,
               onPressed: () {
                 Navigator.pushReplacement(
                     context,
@@ -137,7 +139,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
+                      CupertinoPageRoute(
                         builder: (context) => const CommentScreen(),
                       ),
                     );
@@ -164,9 +166,24 @@ class _ResultScreenState extends State<ResultScreen> {
                       builder: (context) {
                         return AlertDialog(
                           title: const Text("총 문제 수 : 15"),
-                          content: const Text(
-                            "정답 : 10\n 오답 : 5",
-                            style: TextStyle(fontSize: 15),
+                          content: const SizedBox(
+                            height: 70,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "정답 : 10",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "오답 : 5",
+                                  style: TextStyle(fontSize: 15),
+                                ),
+                              ],
+                            ),
                           ),
                           actions: [
                             Center(
@@ -181,11 +198,12 @@ class _ResultScreenState extends State<ResultScreen> {
                                       ),
                                     ),
                                     onPressed: () {
+                                      Navigator.pop(context);
                                       Navigator.pushReplacement(
                                         context,
-                                        MaterialPageRoute(
+                                        CupertinoPageRoute(
                                           builder: (context) =>
-                                          const HomeScreen(),
+                                              const HomeScreen(),
                                         ),
                                       );
                                     },
@@ -206,11 +224,12 @@ class _ResultScreenState extends State<ResultScreen> {
                                       ),
                                     ),
                                     onPressed: () {
+                                      Navigator.pop(context);
                                       Navigator.pushReplacement(
                                         context,
-                                        MaterialPageRoute(
+                                        CupertinoPageRoute(
                                           builder: (context) =>
-                                          const MypageScreen(),
+                                              const MypageScreen(),
                                         ),
                                       );
                                     },
