@@ -9,35 +9,30 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return PreferredSize(
       preferredSize: preferredSize,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          AppBar(
-            backgroundColor: const Color(0xffE4F9F3),
-            title: const Padding(
-              padding: EdgeInsets.all(13.5),
-              child: Text(
-                "Q-int",
-                style: TextStyle(fontSize: 35),
-              ),
+      child: AppBar(
+        backgroundColor: const Color(0xffE4F9F3),
+        title: const Padding(
+          padding: EdgeInsets.all(13.5),
+          child: Text(
+            "Q-int",
+            style: TextStyle(fontSize: 35),
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(13.5),
+            child: IconButton(
+              iconSize: 40,
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.home),
             ),
-            actions: [
-              Padding(
-                padding: const EdgeInsets.all(13.5),
-                child: IconButton(
-                  iconSize: 40,
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ),
-                    );
-                  },
-                  icon: const Icon(Icons.home),
-                ),
-              ),
-            ],
           ),
         ],
       ),
@@ -45,5 +40,5 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(35);
+  Size get preferredSize => const Size.fromHeight(50);
 }
