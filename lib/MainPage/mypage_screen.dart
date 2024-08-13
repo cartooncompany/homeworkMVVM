@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qintproject/LoginPage/login_screen.dart';
 import 'package:qintproject/MainPage/widget/my_page_app_bar.dart';
 import 'package:qintproject/ProblemPage/wronganswer_screen.dart';
@@ -21,71 +22,70 @@ class _MypageScreenState extends State<MypageScreen> {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             Stack(
               children: [
                 Container(
-                  width: 400,
-                  height: 400,
+                  width: 344.w,
+                  height: 357.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
                   ),
-                ),
-                const Positioned(
-                  top: 5,
-                  left: 10,
-                  child: Text(
-                    "나의 정답률",
-                    style: TextStyle(fontSize: 27, color: Colors.black),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "나의 정답률",
+                      style: TextStyle(fontSize: 27.w),
+                    ),
                   ),
                 ),
                 Positioned(
-                  top: 75,
-                  left: 30,
+                  top: 75.h,
+                  left: 30.w,
                   child: Container(
                     width: 17,
                     height: 17,
                     color: const Color(0xff68F665),
                   ),
                 ),
-                const Positioned(
-                  top: 71,
-                  left: 53,
-                  child: Text(
+                Positioned(
+                  top: 71.h,
+                  left: 53.w,
+                  child: const Text(
                     "정답",
                     style: TextStyle(fontSize: 17),
                   ),
                 ),
                 Positioned(
-                  top: 100,
-                  left: 30,
+                  top: 100.h,
+                  left: 30.w,
                   child: Container(
                     width: 17,
                     height: 17,
                     color: const Color(0xffFF3951),
                   ),
                 ),
-                const Positioned(
-                  top: 96,
-                  left: 53,
-                  child: Text(
+                Positioned(
+                  top: 96.h,
+                  left: 53.w,
+                  child: const Text(
                     "오답",
                     style: TextStyle(fontSize: 17),
                   ),
                 ),
                 Positioned(
-                  top: 120,
-                  right: 30,
+                  top: 120.h,
+                  right: 30.w,
                   child: SizedBox(
                     width: 250,
                     height: 250,
                     child: PieChart(
                       PieChartData(
                         sections: getSections(),
-                        centerSpaceRadius: 55,
+                        centerSpaceRadius: 50,
                         borderData: FlBorderData(
                           show: false,
                         ),
@@ -95,13 +95,13 @@ class _MypageScreenState extends State<MypageScreen> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 25.h,
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  minimumSize: const Size(400, 75),
+                  minimumSize: Size(345.w, 80.h),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -116,8 +116,8 @@ class _MypageScreenState extends State<MypageScreen> {
                   "틀린 문제 다시보기 ↻",
                   style: TextStyle(fontSize: 28),
                 )),
-            const SizedBox(
-              height: 240,
+            SizedBox(
+              height: 180.h,
             ),
             Padding(
               padding: const EdgeInsets.all(13),
