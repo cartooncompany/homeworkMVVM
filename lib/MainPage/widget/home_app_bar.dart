@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../mypage_screen.dart';
 
@@ -11,7 +12,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: preferredSize,
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(13.5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -19,12 +20,12 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     "Q-int",
-                    style: TextStyle(fontSize: 35),
+                    style: TextStyle(fontSize: 30.w),
                   ),
                   IconButton(
-                    iconSize: 40,
+                    iconSize: 30.w,
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,

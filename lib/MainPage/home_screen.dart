@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     right: 150.w,
                     child: Text(
                       "플러터",
-                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w),
+                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w,),
                     ),
                   ),
                 ],

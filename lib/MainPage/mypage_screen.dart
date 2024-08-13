@@ -23,7 +23,7 @@ class _MypageScreenState extends State<MypageScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 30.h,
+              height: 25.h,
             ),
             Stack(
               children: [
@@ -46,8 +46,8 @@ class _MypageScreenState extends State<MypageScreen> {
                   top: 75.h,
                   left: 30.w,
                   child: Container(
-                    width: 17,
-                    height: 17,
+                    width: 17.w,
+                    height: 17.h,
                     color: const Color(0xff68F665),
                   ),
                 ),
@@ -80,8 +80,8 @@ class _MypageScreenState extends State<MypageScreen> {
                   top: 120.h,
                   right: 30.w,
                   child: SizedBox(
-                    width: 250,
-                    height: 250,
+                    width: 250.w,
+                    height: 250.h,
                     child: PieChart(
                       PieChartData(
                         sections: getSections(),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../MainPage/home_screen.dart';
 
@@ -19,12 +20,12 @@ class _CommentScreenState extends State<CommentScreen> {
           padding: const EdgeInsets.all(13),
           child: Column(
             children: [
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: 50.h,
               ),
               Container(
-                width: 400,
-                height: 200,
+                width: 353.w,
+                height: 200.h,
                 decoration: BoxDecoration(
                   color: const Color(0xffE4F9F3),
                   borderRadius: BorderRadius.circular(15),
@@ -41,12 +42,12 @@ class _CommentScreenState extends State<CommentScreen> {
                 "01/15",
                 style: TextStyle(fontSize: 20),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               Container(
-                width: 400,
-                height: 75,
+                width: 353.w,
+                height: 69.h,
                 decoration: BoxDecoration(
                   border: Border.all(width: 3, color: const Color(0xff68F665)),
                   color: const Color(0xffE4F9F3),
@@ -59,12 +60,12 @@ class _CommentScreenState extends State<CommentScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 30,
+              SizedBox(
+                height: 25.h,
               ),
               Container(
-                width: 400,
-                height: 470,
+                width: 353.w,
+                height: 281.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xffE4F9F3),
@@ -77,41 +78,44 @@ class _CommentScreenState extends State<CommentScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 12.h,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => const HomeScreen(),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.home)),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff265CFF),
+                        minimumSize: const Size(100, 50),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                      onPressed: () {
+                        print("다음 문제");
+                      },
+                      child: const Text(
+                        "다음 문제",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
-        ),
-      ),
-      bottomSheet: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    CupertinoPageRoute(
-                      builder: (context) => const HomeScreen(),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.home)),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff265CFF),
-                minimumSize: const Size(100, 50),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-              onPressed: () {
-                print("다음 문제");
-              },
-              child: const Text(
-                "다음 문제",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
         ),
       ),
     );

@@ -10,7 +10,7 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: preferredSize,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(13.5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

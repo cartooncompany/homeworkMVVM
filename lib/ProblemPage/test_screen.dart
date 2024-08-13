@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qintproject/ProblemPage/result_screen.dart';
 
 import '../MainPage/home_screen.dart';
@@ -18,32 +19,32 @@ class _TestScreenState extends State<TestScreen> {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 65.h,
             ),
             Container(
               padding: const EdgeInsets.all(8),
-              width: 400,
-              height: 250,
+              width: 345.w,
+              height: 200.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: const Color(0xffE4F9F3),
               ),
               child: const Text(
                 "문제",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 25),
               ),
             ),
             const Text(
               "01/15",
               style: TextStyle(fontSize: 20),
             ),
-            const SizedBox(
-              height: 75,
+            SizedBox(
+              height: 50.h,
             ),
             Container(
-              width: 400,
-              height: 75,
+              width: 353.w,
+              height: 69.h,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -55,12 +56,12 @@ class _TestScreenState extends State<TestScreen> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 15.h,
             ),
             Container(
-              width: 400,
-              height: 75,
+              width: 353.w,
+              height: 69.h,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -71,12 +72,12 @@ class _TestScreenState extends State<TestScreen> {
                 style: TextStyle(fontSize: 20),
               )),
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 15.h,
             ),
             Container(
-              width: 400,
-              height: 75,
+              width: 353.w,
+              height: 69.h,
               decoration: BoxDecoration(
                 color: const Color(0xffC7FFEF),
                 borderRadius: BorderRadius.circular(15),
@@ -87,12 +88,12 @@ class _TestScreenState extends State<TestScreen> {
                 style: TextStyle(fontSize: 20),
               )),
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 15.h,
             ),
             Container(
-              width: 400,
-              height: 75,
+              width: 353.w,
+              height: 69.h,
               decoration: BoxDecoration(
                 color: const Color(0xffE4F9F3),
                 borderRadius: BorderRadius.circular(15),
@@ -104,45 +105,48 @@ class _TestScreenState extends State<TestScreen> {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-      bottomSheet: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                iconSize: 35,
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    CupertinoPageRoute(
-                      builder: (context) => const HomeScreen(),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.home)),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff265CFF),
-                minimumSize: const Size(100, 50),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-              ),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  CupertinoPageRoute(
-                    builder: (context) => const ResultScreen(),
-                  ),
-                );
-              },
-              child: const Text(
-                "다음 문제",
-                style: TextStyle(color: Colors.white),
-              ),
+            SizedBox(
+              height: 50.h,
             ),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                      iconSize: 35.h,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.home)),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff265CFF),
+                      minimumSize: Size(105.w, 44.h),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const ResultScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      "다음 문제",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
