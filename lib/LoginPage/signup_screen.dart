@@ -170,8 +170,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 border: InputBorder.none,
                 labelText: "비밀번호 재입력",
                 filled: true,
-                fillColor: Color(0xffF4F4F4),
-                labelStyle: TextStyle(color: Color(0xffB4B4B4)),
+                fillColor: const Color(0xffF4F4F4),
+                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
                 enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
