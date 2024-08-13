@@ -24,7 +24,7 @@ class _SignupScreenState extends State<SignupScreen> {
             children: [
               Text(
                 "회원가입",
-                style: TextStyle(color: const Color(0xff00EDA6), fontSize: 43.w),
+                style: TextStyle(color: const Color(0xff00EDA6), fontSize: 37.w),
               ),
             ],
           ),
@@ -61,7 +61,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff00EDA6),
-                      minimumSize: Size(66.w, 32.h),
+                      minimumSize: Size(65.w, 32.h),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),

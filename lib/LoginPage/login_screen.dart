@@ -40,12 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Text(
                 "로그인",
-                style: TextStyle(color: const Color(0xff00EDA6), fontSize: 43.w),
+                style: TextStyle(color: const Color(0xff00EDA6), fontSize: 37.w),
               ),
             ],
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           SizedBox(
             width: 345.w,
@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           SizedBox(
-            height: 385.h,
+            height: 381.h,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
