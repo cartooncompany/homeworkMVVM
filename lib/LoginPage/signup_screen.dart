@@ -11,6 +11,33 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  late TextEditingController _signEmController = TextEditingController();
+  late TextEditingController _checkController = TextEditingController();
+  late TextEditingController _signPwController = TextEditingController();
+  late TextEditingController _checkPwController = TextEditingController();
+  bool _obscureText = true;
+  bool _chObscureText = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _signEmController = TextEditingController();
+    _checkController = TextEditingController();
+    _signPwController = TextEditingController();
+    _checkPwController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _signEmController.dispose();
+    _checkController.dispose();
+    _signPwController.dispose();
+    _checkPwController.dispose();
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +77,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               keyboardType: TextInputType.emailAddress,
-              controller: TextEditingController(),
+              controller: _signEmController,
             ),
           ),
           Padding(
@@ -88,7 +115,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide.none,
                   )),
-              controller: TextEditingController(),
+              controller: _checkController,
             ),
           ),
           SizedBox(
@@ -99,17 +126,27 @@ class _SignupScreenState extends State<SignupScreen> {
             height: 52.h,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             child: TextField(
-              decoration: const InputDecoration(
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _obscureText ? Icons.visibility_off : Icons.visibility
+                  ), onPressed: (){
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                },
+                ),
                 border: InputBorder.none,
                 labelText: "비밀번호",
                 filled: true,
-                fillColor: Color(0xffF4F4F4),
-                labelStyle: TextStyle(color: Color(0xffB4B4B4)),
-                enabledBorder: OutlineInputBorder(
+                fillColor: const Color(0xffF4F4F4),
+                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
               ),
-              controller: TextEditingController(),
+              controller: _signPwController,
             ),
           ),
           SizedBox(
@@ -119,17 +156,27 @@ class _SignupScreenState extends State<SignupScreen> {
             width: 345.w,
             height: 52.h,
             child: TextField(
-              decoration: const InputDecoration(
+              obscureText: _chObscureText,
+              decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _chObscureText ? Icons.visibility_off : Icons.visibility
+                  ), onPressed: (){
+                    setState(() {
+                      _chObscureText = !_chObscureText;
+                    });
+                },
+                ),
                 border: InputBorder.none,
                 labelText: "비밀번호 재입력",
                 filled: true,
                 fillColor: Color(0xffF4F4F4),
                 labelStyle: TextStyle(color: Color(0xffB4B4B4)),
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
               ),
-              controller: TextEditingController(),
+              controller: _checkPwController,
             ),
           ),
           SizedBox(
@@ -175,7 +222,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 );
               },
               child: const Text(
-                "로그인하러 가기",
+                "로그인 하러 가기",
                 style: TextStyle(fontSize: 16, color: Color(0xff00EDA6)),
               )),
           SizedBox(

@@ -13,18 +13,24 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  late TextEditingController _controller;
+  late TextEditingController _emailController = TextEditingController();
+  late TextEditingController _passwordController = TextEditingController();
+  bool _obscureText = true;
+
+
 
   @override
   void initState() {
     super.initState();
-    _controller = TextEditingController();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controller.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
   }
 
   @override
@@ -62,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               keyboardType: TextInputType.emailAddress,
-              controller: _controller,
+              controller: _emailController,
             ),
           ),
           const SizedBox(
@@ -75,19 +81,29 @@ class _LoginScreenState extends State<LoginScreen> {
               borderRadius: BorderRadius.circular(8),
             ),
             child: TextField(
-              decoration: const InputDecoration(
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _obscureText ? Icons.visibility_off : Icons.visibility
+                  ), onPressed: (){
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                },
+                ),
                 border: InputBorder.none,
                 labelText: "비밀번호",
                 filled: true,
-                fillColor: Color(0xffF4F4F4),
-                labelStyle: TextStyle(
+                fillColor: const Color(0xffF4F4F4),
+                labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
               ),
-              controller: _controller,
+              controller: _passwordController,
             ),
           ),
           SizedBox(
