@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:qintproject/MainPage/widget/home_app_bar.dart';
 import 'package:qintproject/ProblemPage/test_screen.dart';
-import 'mypage_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,190 +16,163 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(75),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            AppBar(
-              title: const Padding(
-                padding: EdgeInsets.all(13.5),
-                child: Text(
-                  "Q-int",
-                  style: TextStyle(fontSize: 35),
-                ),
-              ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.all(13.5),
-                  child: IconButton(
-                      iconSize: 40,
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          CupertinoPageRoute(
-                            builder: (context) => const MypageScreen(),
-                          ),
-                        );
-                      },
-                      icon: const Icon(Icons.person)),
-                )
-              ],
-              backgroundColor: Colors.white,
-            ),
-          ],
-        ),
-      ),
+      appBar: const HomeAppBar(),
       body: Column(
         children: [
-          const SizedBox(
-            height: 45,
+          SizedBox(
+            height: 27.h,
           ),
           Center(
             child: SizedBox(
-              width: 400,
-              height: 85,
+              width: 345.w,
+              height: 84.h,
               child: Stack(
                 children: [
                   Container(
-                    width: 400,
-                    height: 85,
+                    width: 345.w,
+                    height: 84.h,
                     decoration: BoxDecoration(
                         border: Border.all(
-                            width: 3, color: const Color(0xff00EDA6)),
+                          width: 3,
+                          color: const Color(0xff00EDA6),
+                        ),
                         color: const Color(0xffC7FFEF),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   Positioned(
-                    top: -30,
-                    right: 0,
+                    top: -17.h,
+                    right: 0.w,
                     child: Image.asset(
                       'assets/images/frame/Frame 132.png',
                       width: 150,
                       height: 150,
                     ),
                   ),
-                  const Positioned(
-                    top: 28,
-                    right: 150,
+                  Positioned(
+                    top: 30.h,
+                    right: 130.w,
                     child: Text(
                       "프론트엔드",
-                      style: TextStyle(color: Color(0xff00EDA6), fontSize: 20),
+                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 15.h,
           ),
           Center(
             child: SizedBox(
-              width: 400,
-              height: 85,
+              width: 345.w,
+              height: 84.h,
               child: Stack(
                 children: [
                   Container(
-                    width: 400,
-                    height: 85,
+                    width: 345.w,
+                    height: 84.h,
                     decoration: BoxDecoration(
                         color: const Color(0xffE4F9F3),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   Positioned(
+                    top: -30.h,
+                    left: 0.w,
                     child: Image.asset(
                       'assets/images/frame/Frame 133.png',
                       width: 150,
                       height: 150,
                     ),
                   ),
-                  const Positioned(
-                    top: 28,
-                    right: 170,
+                  Positioned(
+                    top: 28.h,
+                    right: 147.w,
                     child: Text(
                       "벡앤드",
-                      style: TextStyle(color: Color(0xff00EDA6), fontSize: 20),
+                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 15.h,
           ),
           Center(
             child: SizedBox(
-              width: 400,
-              height: 85,
+              width: 345.w,
+              height: 84.h,
               child: Stack(
                 children: [
                   Container(
-                    width: 400,
-                    height: 85,
+                    width: 345.w,
+                    height: 84.h,
                     decoration: BoxDecoration(
                         color: const Color(0xffE4F9F3),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   Positioned(
-                    top: -32,
-                    right: 0,
+                    top: -32.h,
+                    right: 0.w,
                     child: Image.asset(
                       'assets/images/frame/Frame 134.png',
                       width: 150,
                       height: 150,
                     ),
                   ),
-                  const Positioned(
-                    top: 28,
-                    right: 175,
+                  Positioned(
+                    top: 28.h,
+                    right: 155.w,
                     child: Text(
                       "iOS",
-                      style: TextStyle(color: Color(0xff00EDA6), fontSize: 20),
+                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Center(
             child: SizedBox(
-              width: 400,
-              height: 85,
+              width: 345.w,
+              height: 84.h,
               child: Stack(
                 children: [
                   Container(
-                    width: 400,
-                    height: 85,
+                    width: 345.w,
+                    height: 84.h,
                     decoration: BoxDecoration(
                         color: const Color(0xffE4F9F3),
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   Positioned(
+                    top: -17.h,
+                    left: 0.w,
                     child: Image.asset(
                       'assets/images/frame/Frame 135.png',
                       width: 150,
                       height: 150,
                     ),
                   ),
-                  const Positioned(
-                    top: 28,
-                    right: 170,
+                  Positioned(
+                    top: 28.h,
+                    right: 150.w,
                     child: Text(
                       "플러터",
-                      style: TextStyle(color: Color(0xff00EDA6), fontSize: 20),
+                      style: TextStyle(color: const Color(0xff00EDA6), fontSize: 20.w),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           const Text(
             "카테고리를 한 개 이상 선택해주세요!",
@@ -206,11 +181,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       bottomSheet: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(40.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xff00EDA6),
-            minimumSize: const Size(370, 50),
+            minimumSize: Size(345.w, 52.h),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
