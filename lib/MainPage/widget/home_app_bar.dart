@@ -20,9 +20,10 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Q-int",
-                    style: TextStyle(fontSize: 30.w),
+                  Image.asset(
+                    width: 72.w,
+                    height: 29.h,
+                    'assets/images/logo/Q-int-logo.png'
                   ),
                   IconButton(
                     iconSize: 30.w,

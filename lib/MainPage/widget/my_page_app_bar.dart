@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../home_screen.dart';
 
@@ -19,9 +20,10 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Q-int",
-                    style: TextStyle(fontSize: 35),
+                  Image.asset(
+                      width: 72.w,
+                      height: 29.h,
+                      'assets/images/logo/Q-int-logo.png'
                   ),
                   IconButton(
                     iconSize: 40,
