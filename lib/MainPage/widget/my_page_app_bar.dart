@@ -17,6 +17,7 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             AppBar(
+              automaticallyImplyLeading: false,
               backgroundColor: const Color(0xffE4F9F3),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
