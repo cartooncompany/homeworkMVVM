@@ -12,7 +12,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: preferredSize,
       child: Padding(
-        padding: const EdgeInsets.all(13.5),
+        padding: EdgeInsets.all(13.5.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

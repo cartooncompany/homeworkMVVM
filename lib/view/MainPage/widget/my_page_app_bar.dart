@@ -12,7 +12,7 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
     return PreferredSize(
       preferredSize: preferredSize,
       child: Padding(
-        padding: const EdgeInsets.all(13.5),
+        padding: EdgeInsets.all(13.5.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -28,7 +28,7 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
                       'assets/images/logo/Q-int-logo.png'
                   ),
                   IconButton(
-                    iconSize: 40,
+                    iconSize: 40.sp,
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
