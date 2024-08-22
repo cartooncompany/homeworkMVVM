@@ -18,25 +18,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool _obscureText = true;
 
-  bool _backColor1 = true;
-  bool _borderColor1 = true;
-  bool _borderWidth = true;
+  bool _idBackColor = true;
   final FocusNode _focusNode = FocusNode();
 
-  bool _backColor2 = true;
-  bool _borderColor2 = true;
+  bool _pwBackColor = true;
   final FocusNode _focusNode2 = FocusNode();
-
-  double width1 = 2.0;
-  double width2 = 0.0;
 
   @override
   void initState() {
     super.initState();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
-    _focusNode.addListener(_changeFocus1);
-    _focusNode2.addListener(_changeFocus2);
+    _focusNode.addListener(_changeIdFocus);
+    _focusNode2.addListener(_changePwFocus);
   }
 
   @override
@@ -44,39 +38,29 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
-    _focusNode.removeListener(_changeFocus1);
-    _focusNode2.removeListener(_changeFocus2);
+    _focusNode.removeListener(_changeIdFocus);
+    _focusNode2.removeListener(_changePwFocus);
     _focusNode.dispose();
     _focusNode2.dispose();
   }
 
-  void _changeFocus1() {
+  void _changeIdFocus() {
     if (_focusNode.hasFocus) {
       setState(() {
-        _backColor1 = false;
-        _borderColor1 = false;
-        _borderWidth = false;
+        _idBackColor = false;
       });
     } else {
-      setState(() {
-        _backColor1 = true;
-        _borderColor1 = true;
-        _borderWidth = true;
-      });
+        _idBackColor = true;
     }
   }
 
-  void _changeFocus2() {
+  void _changePwFocus() {
     if (_focusNode2.hasFocus) {
       setState(() {
-        _backColor2 = false;
-        _borderColor2 = false;
+        _pwBackColor = false;
       });
     } else {
-      setState(() {
-        _backColor2 = true;
-        _borderColor2 = true;
-      });
+        _pwBackColor = true;
     }
   }
 
@@ -107,17 +91,16 @@ class _LoginScreenState extends State<LoginScreen> {
             child: TextField(
               focusNode: _focusNode,
               decoration: InputDecoration(
-                border: InputBorder.none,
-                labelText: "이메일",
-                filled: true,
-                fillColor: _backColor1 ? const Color(0xffF4F4F4) : Colors.white,
-                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
-                enabledBorder: OutlineInputBorder(
+                border: const OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: _borderColor1 ? const Color(0xffF4F4F4) : Colors.black,
-                    width: _borderWidth ? width1 : width2,
+                    width: 3,
                   ),
                 ),
+                labelText: "이메일",
+                filled: true,
+                fillColor: _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                enabledBorder: InputBorder.none,
               ),
               keyboardType: TextInputType.emailAddress,
               controller: _emailController,
@@ -147,16 +130,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                   },
                 ),
-                border: InputBorder.none,
-                labelText: "비밀번호",
-                filled: true,
-                fillColor: _backColor2 ? const Color(0xffF4F4F4) : Colors.white,
-                enabledBorder: OutlineInputBorder(
+                border: const OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: _borderColor2 ? Colors.transparent : Colors.black,
                     width: 2,
                   ),
                 ),
+                labelText: "비밀번호",
+                filled: true,
+                fillColor: _pwBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                enabledBorder: InputBorder.none,
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
