@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'login_screen.dart';
@@ -127,9 +128,14 @@ class _SignupScreenState extends State<SignupScreen> {
             width: 345.w,
             height: 52.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.r),
             ),
             child: TextField(
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(
+                  RegExp(r'^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$'),
+                ),
+              ],
               focusNode: _idFocusNode,
               decoration: InputDecoration(
                 border: const OutlineInputBorder(
@@ -141,7 +147,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 filled: true,
                 fillColor:
                     _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
-                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                labelStyle: const TextStyle(
+                  color: Color(0xffB4B4B4),
+                ),
                 enabledBorder: InputBorder.none,
               ),
               keyboardType: TextInputType.emailAddress,
@@ -149,7 +157,7 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(30),
+            padding: EdgeInsets.all(30.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -158,14 +166,18 @@ class _SignupScreenState extends State<SignupScreen> {
                       backgroundColor: const Color(0xff00EDA6),
                       minimumSize: Size(65.w, 40.h),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
+                        borderRadius: BorderRadius.circular(8.r),
+                      ),
                     ),
                     onPressed: () {
-                        print("인증코드 발송");
+                      print("인증코드 발송");
                     },
                     child: const Text(
                       "Send",
-                      style: TextStyle(fontSize: 20, color: Color(0xffFFFFFF)),
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xffFFFFFF),
+                      ),
                     )),
               ],
             ),
@@ -186,7 +198,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 fillColor: _certificationNumber
                     ? const Color(0xffF4F4F4)
                     : Colors.white,
-                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                labelStyle: const TextStyle(
+                  color: Color(0xffB4B4B4),
+                ),
                 enabledBorder: InputBorder.none,
               ),
               controller: _checkController,
@@ -198,8 +212,16 @@ class _SignupScreenState extends State<SignupScreen> {
           Container(
             width: 345.w,
             height: 52.h,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.r),
+            ),
             child: TextField(
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(
+                  RegExp(
+                      r'^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$%^&*()\\-_=+<>?]).{8,64}$'),
+                ),
+              ],
               focusNode: _passwordFocusNode,
               obscureText: _obscureText,
               decoration: InputDecoration(
@@ -222,7 +244,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   fillColor: _passwordBackColor
                       ? const Color(0xffF4F4F4)
                       : Colors.white,
-                  labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                  labelStyle: const TextStyle(
+                    color: Color(0xffB4B4B4),
+                  ),
                   enabledBorder: InputBorder.none),
               controller: _signPwController,
             ),
@@ -256,21 +280,23 @@ class _SignupScreenState extends State<SignupScreen> {
                 fillColor: _checkPasswordbackColor
                     ? const Color(0xffF4F4F4)
                     : Colors.white,
-                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
+                labelStyle: const TextStyle(
+                  color: Color(0xffB4B4B4),
+                ),
                 enabledBorder: InputBorder.none,
               ),
               controller: _checkPwController,
             ),
           ),
           SizedBox(
-            height: 170.h,
+            height: 165.h,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xff00EDA6),
               minimumSize: Size(345.w, 52.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.r),
               ),
             ),
             onPressed: () {
@@ -283,7 +309,10 @@ class _SignupScreenState extends State<SignupScreen> {
             },
             child: const Text(
               "회원가입",
-              style: TextStyle(fontSize: 16, color: Color(0xffFFFFFF)),
+              style: TextStyle(
+                fontSize: 16,
+                color: Color(0xffFFFFFF),
+              ),
             ),
           ),
           SizedBox(
@@ -294,7 +323,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 backgroundColor: const Color(0xffE4F9F3),
                 minimumSize: Size(345.w, 52.h),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
               ),
               onPressed: () {
@@ -307,7 +336,10 @@ class _SignupScreenState extends State<SignupScreen> {
               },
               child: const Text(
                 "로그인 하러 가기",
-                style: TextStyle(fontSize: 16, color: Color(0xff00EDA6)),
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xff00EDA6),
+                ),
               )),
           SizedBox(
             height: 10.h,
