@@ -28,7 +28,7 @@ class MyPageAppBar extends StatelessWidget implements PreferredSizeWidget {
                       'assets/images/logo/Q-int-logo.png'
                   ),
                   IconButton(
-                    iconSize: 40.sp,
+                    iconSize: 30.sp,
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,

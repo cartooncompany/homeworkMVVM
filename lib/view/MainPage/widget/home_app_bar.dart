@@ -27,7 +27,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                     'assets/images/logo/Q-int-logo.png'
                   ),
                   IconButton(
-                    iconSize: 30.w,
+                    iconSize: 30.sp,
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
