@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _idBackColor = false;
       });
     } else {
-        _idBackColor = true;
+      _idBackColor = true;
     }
   }
 
@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
         _pwBackColor = false;
       });
     } else {
-        _pwBackColor = true;
+      _pwBackColor = true;
     }
   }
 
@@ -89,8 +89,8 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 345.w,
             height: 52.h,
             child: TextField(
-              style: const TextStyle(
-                fontSize: 17,
+              style: TextStyle(
+                fontSize: 17.sp,
               ),
               focusNode: _focusNode,
               decoration: InputDecoration(
@@ -99,14 +99,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelText: "이메일",
                 hintText: "이메일",
                 filled: true,
-                fillColor: _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
-                labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
-                focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xffE0E0E0),
-                      width: 2,
-                    )
+                fillColor:
+                    _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                labelStyle: const TextStyle(
+                  color: Color(0xffB4B4B4),
                 ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: const Color(0xffE0E0E0),
+                  width: 2.w,
+                )),
               ),
               keyboardType: TextInputType.emailAddress,
               controller: _emailController,
@@ -119,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 345.w,
             height: 76.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.r),
             ),
             child: TextField(
               obscureText: _obscureText,
@@ -141,12 +143,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelText: "비밀번호",
                 hintText: "비밀번호",
                 filled: true,
-                fillColor: _pwBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                fillColor:
+                    _pwBackColor ? const Color(0xffF4F4F4) : Colors.white,
                 focusColor: Colors.white,
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xffE0E0E0),
-                    width: 2,
+                    color: const Color(0xffE0E0E0),
+                    width: 2.w,
                   ),
                 ),
                 labelStyle: const TextStyle(
@@ -164,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
               backgroundColor: const Color(0xff00EDA6),
               minimumSize: Size(345.w, 52.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.r),
               ),
             ),
             onPressed: () {
@@ -175,9 +178,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               );
             },
-            child: const Text(
+            child: Text(
               "로그인",
-              style: TextStyle(fontSize: 16, color: Color(0xffFFFFFF)),
+              style: TextStyle(
+                fontSize: 16.sp,
+                color: const Color(0xffFFFFFF),
+              ),
             ),
           ),
           const SizedBox(
@@ -188,7 +194,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 backgroundColor: const Color(0xffE4F9F3),
                 minimumSize: Size(345.w, 52.h),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8)),
+                  borderRadius: BorderRadius.circular(8.r),
+                ),
               ),
               onPressed: () {
                 Navigator.pushReplacement(
@@ -197,9 +204,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       builder: (context) => const SignupScreen(),
                     ));
               },
-              child: const Text(
+              child: Text(
                 "회원가입하러 가기",
-                style: TextStyle(fontSize: 16, color: Color(0xff00EDA6)),
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  color: const Color(0xff00EDA6),
+                ),
               )),
         ],
       ),

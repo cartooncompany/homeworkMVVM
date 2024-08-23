@@ -148,10 +148,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xffE0E0E0),
-                    width: 2,
+                    color: const Color(0xffE0E0E0),
+                    width: 2.w,
                   ),
                 ),
               ),
@@ -175,11 +175,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     onPressed: () {
                       print("인증코드 발송");
                     },
-                    child: const Text(
+                    child: Text(
                       "Send",
                       style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xffFFFFFF),
+                        fontSize: 20.sp,
+                        color: const Color(0xffFFFFFF),
                       ),
                     )),
               ],
@@ -202,10 +202,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xffE0E0E0),
-                    width: 2,
+                    color: const Color(0xffE0E0E0),
+                    width: 2.w,
                   ),
                 ),
               ),
@@ -250,10 +250,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xffE0E0E0),
-                    width: 2,
+                    color: const Color(0xffE0E0E0),
+                    width: 2.w,
                   ),
                 ),
               ),
@@ -290,10 +290,10 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                focusedBorder: const OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xffE0E0E0),
-                    width: 2,
+                    color: const Color(0xffE0E0E0),
+                    width: 2.w,
                   ),
                 ),
               ),
@@ -346,11 +346,11 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 );
               },
-              child: const Text(
+              child: Text(
                 "로그인 하러 가기",
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff00EDA6),
+                  fontSize: 16.sp,
+                  color: const Color(0xff00EDA6),
                 ),
               )),
           SizedBox(
