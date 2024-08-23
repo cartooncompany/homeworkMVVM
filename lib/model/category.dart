@@ -1,0 +1,54 @@
+class Questions {
+  final List<Model> questions;
+
+  Questions({
+    required this.questions,
+  });
+
+  factory Questions.fromJson(Map<String, dynamic> json) {
+    return Questions(
+      questions: List<Model>.from(
+        json['questions'].map(
+          (i) => Model.fromJson(i),
+        ),
+      ),
+    );
+  }
+}
+
+class Model {
+  final int id;
+  final String contents;
+  final List<Option> options;
+
+  const Model({
+    required this.id,
+    required this.contents,
+    required this.options,
+  });
+
+  factory Model.fromJson(Map<String, dynamic> json) {
+    return Model(
+      id: json['id'],
+      contents: json['contents'],
+      options: json['options'].map<Option>((i) => Option.fromJson(i)).toList(),
+    );
+  }
+}
+
+class Option {
+  final int id;
+  final String text;
+
+  const Option({
+    required this.id,
+    required this.text,
+  });
+
+  factory Option.fromJson(Map<String, dynamic> json) {
+    return Option(
+      id: json['id'],
+      text: json['text'],
+    );
+  }
+}
