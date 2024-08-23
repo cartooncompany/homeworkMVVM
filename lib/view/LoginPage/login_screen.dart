@@ -89,18 +89,24 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 345.w,
             height: 52.h,
             child: TextField(
+              style: const TextStyle(
+                fontSize: 17,
+              ),
               focusNode: _focusNode,
               decoration: InputDecoration(
-                border: const OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 3,
-                  ),
-                ),
+                border: InputBorder.none,
+                floatingLabelBehavior: FloatingLabelBehavior.never,
                 labelText: "이메일",
+                hintText: "이메일",
                 filled: true,
                 fillColor: _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
                 labelStyle: const TextStyle(color: Color(0xffB4B4B4)),
-                enabledBorder: InputBorder.none,
+                focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xffE0E0E0),
+                      width: 2,
+                    )
+                ),
               ),
               keyboardType: TextInputType.emailAddress,
               controller: _emailController,
@@ -119,6 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: _obscureText,
               focusNode: _focusNode2,
               decoration: InputDecoration(
+                floatingLabelBehavior: FloatingLabelBehavior.never,
                 suffixIcon: IconButton(
                   icon: Icon(
                       _obscureText ? Icons.visibility_off : Icons.visibility),
@@ -130,15 +137,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                   },
                 ),
-                border: const OutlineInputBorder(
+                border: InputBorder.none,
+                labelText: "비밀번호",
+                hintText: "비밀번호",
+                filled: true,
+                fillColor: _pwBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                focusColor: Colors.white,
+                focusedBorder: const OutlineInputBorder(
                   borderSide: BorderSide(
+                    color: Color(0xffE0E0E0),
                     width: 2,
                   ),
                 ),
-                labelText: "비밀번호",
-                filled: true,
-                fillColor: _pwBackColor ? const Color(0xffF4F4F4) : Colors.white,
-                enabledBorder: InputBorder.none,
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),

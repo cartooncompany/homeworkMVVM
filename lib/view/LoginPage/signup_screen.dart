@@ -138,19 +138,22 @@ class _SignupScreenState extends State<SignupScreen> {
               ],
               focusNode: _idFocusNode,
               decoration: InputDecoration(
-                border: const OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 3,
-                  ),
-                ),
+                floatingLabelBehavior: FloatingLabelBehavior.never,
+                border: InputBorder.none,
                 labelText: "이메일",
+                hintText: "이메일",
                 filled: true,
                 fillColor:
                     _idBackColor ? const Color(0xffF4F4F4) : Colors.white,
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                enabledBorder: InputBorder.none,
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffE0E0E0),
+                    width: 2,
+                  ),
+                ),
               ),
               keyboardType: TextInputType.emailAddress,
               controller: _signEmController,
@@ -188,12 +191,10 @@ class _SignupScreenState extends State<SignupScreen> {
             child: TextField(
               focusNode: _certificationFocusNode,
               decoration: InputDecoration(
-                border: const OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 3,
-                  ),
-                ),
+                floatingLabelBehavior: FloatingLabelBehavior.never,
+                border: InputBorder.none,
                 labelText: "인증번호",
+                hintText: "인증번호",
                 filled: true,
                 fillColor: _certificationNumber
                     ? const Color(0xffF4F4F4)
@@ -201,7 +202,12 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                enabledBorder: InputBorder.none,
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffE0E0E0),
+                    width: 2,
+                  ),
+                ),
               ),
               controller: _checkController,
             ),
@@ -225,29 +231,32 @@ class _SignupScreenState extends State<SignupScreen> {
               focusNode: _passwordFocusNode,
               obscureText: _obscureText,
               decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                        _obscureText ? Icons.visibility_off : Icons.visibility),
-                    onPressed: () {
-                      setState(() {
-                        _obscureText = !_obscureText;
-                      });
-                    },
+                floatingLabelBehavior: FloatingLabelBehavior.never,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                      _obscureText ? Icons.visibility_off : Icons.visibility),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                ),
+                border: InputBorder.none,
+                labelText: "비밀번호",
+                hintText: "비밀번호",
+                filled: true,
+                fillColor:
+                    _passwordBackColor ? const Color(0xffF4F4F4) : Colors.white,
+                labelStyle: const TextStyle(
+                  color: Color(0xffB4B4B4),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffE0E0E0),
+                    width: 2,
                   ),
-                  border: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 3,
-                    ),
-                  ),
-                  labelText: "비밀번호",
-                  filled: true,
-                  fillColor: _passwordBackColor
-                      ? const Color(0xffF4F4F4)
-                      : Colors.white,
-                  labelStyle: const TextStyle(
-                    color: Color(0xffB4B4B4),
-                  ),
-                  enabledBorder: InputBorder.none),
+                ),
+              ),
               controller: _signPwController,
             ),
           ),
@@ -261,6 +270,7 @@ class _SignupScreenState extends State<SignupScreen> {
               focusNode: _checkPasswordFocusNode,
               obscureText: _chObscureText,
               decoration: InputDecoration(
+                floatingLabelBehavior: FloatingLabelBehavior.never,
                 suffixIcon: IconButton(
                   icon: Icon(
                       _chObscureText ? Icons.visibility_off : Icons.visibility),
@@ -270,12 +280,9 @@ class _SignupScreenState extends State<SignupScreen> {
                     });
                   },
                 ),
-                border: const OutlineInputBorder(
-                  borderSide: BorderSide(
-                    width: 3,
-                  ),
-                ),
+                border: InputBorder.none,
                 labelText: "비밀번호 재입력",
+                hintText: "비밀번호 재입력",
                 filled: true,
                 fillColor: _checkPasswordbackColor
                     ? const Color(0xffF4F4F4)
@@ -283,7 +290,12 @@ class _SignupScreenState extends State<SignupScreen> {
                 labelStyle: const TextStyle(
                   color: Color(0xffB4B4B4),
                 ),
-                enabledBorder: InputBorder.none,
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffE0E0E0),
+                    width: 2,
+                  ),
+                ),
               ),
               controller: _checkPwController,
             ),
