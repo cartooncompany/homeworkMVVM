@@ -1,0 +1,334 @@
+{
+  "questions": [
+    {
+      "question_id": 1,
+      "contents": "π를 제대로 기술한 것은?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "π는 원주율로, 원의 둘레와 지름의 비율입니다."
+        },
+        {
+          "answer_id": 2,
+          "text": "π는 삼각형의 내각 합계입니다."
+        },
+        {
+          "answer_id": 3,
+          "text": "π는 자연수 3과 같습니다."
+        },
+        {
+          "answer_id": 4,
+          "text": "π는 원의 반지름의 제곱에 비례합니다."
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "contents": "전자기파의 속도는 진공에서 얼마입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "약 300,000 km/s"
+        },
+        {
+          "answer_id": 2,
+          "text": "약 150,000 km/s"
+        },
+        {
+          "answer_id": 3,
+          "text": "약 30,000 km/s"
+        },
+        {
+          "answer_id": 4,
+          "text": "약 3,000 km/s"
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "contents": "뉴턴의 제1법칙은 무엇에 대한 설명입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "관성의 법칙"
+        },
+        {
+          "answer_id": 2,
+          "text": "작용 반작용의 법칙"
+        },
+        {
+          "answer_id": 3,
+          "text": "힘과 가속도의 관계"
+        },
+        {
+          "answer_id": 4,
+          "text": "에너지 보존 법칙"
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "contents": "물의 화학식은 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "H2O"
+        },
+        {
+          "answer_id": 2,
+          "text": "O2"
+        },
+        {
+          "answer_id": 3,
+          "text": "CO2"
+        },
+        {
+          "answer_id": 4,
+          "text": "NaCl"
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "contents": "빛의 3원색에 해당하지 않는 색은 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "노랑"
+        },
+        {
+          "answer_id": 2,
+          "text": "빨강"
+        },
+        {
+          "answer_id": 3,
+          "text": "파랑"
+        },
+        {
+          "answer_id": 4,
+          "text": "초록"
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "contents": "우리나라의 수도는 어디입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "서울"
+        },
+        {
+          "answer_id": 2,
+          "text": "부산"
+        },
+        {
+          "answer_id": 3,
+          "text": "대구"
+        },
+        {
+          "answer_id": 4,
+          "text": "인천"
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "contents": "지구의 자전 주기는 몇 시간입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "24시간"
+        },
+        {
+          "answer_id": 2,
+          "text": "12시간"
+        },
+        {
+          "answer_id": 3,
+          "text": "36시간"
+        },
+        {
+          "answer_id": 4,
+          "text": "48시간"
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "contents": "원소의 주기율표에서 산소의 원소 기호는 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "O"
+        },
+        {
+          "answer_id": 2,
+          "text": "H"
+        },
+        {
+          "answer_id": 3,
+          "text": "C"
+        },
+        {
+          "answer_id": 4,
+          "text": "N"
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "contents": "에너지의 단위로 사용되는 것은?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "줄(J)"
+        },
+        {
+          "answer_id": 2,
+          "text": "암페어(A)"
+        },
+        {
+          "answer_id": 3,
+          "text": "볼트(V)"
+        },
+        {
+          "answer_id": 4,
+          "text": "오옴(Ω)"
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "contents": "태양계에서 가장 큰 행성은 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "목성"
+        },
+        {
+          "answer_id": 2,
+          "text": "토성"
+        },
+        {
+          "answer_id": 3,
+          "text": "지구"
+        },
+        {
+          "answer_id": 4,
+          "text": "화성"
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "contents": "인간의 몸에서 가장 큰 장기는 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "피부"
+        },
+        {
+          "answer_id": 2,
+          "text": "간"
+        },
+        {
+          "answer_id": 3,
+          "text": "심장"
+        },
+        {
+          "answer_id": 4,
+          "text": "폐"
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "contents": "소금의 화학식은 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "NaCl"
+        },
+        {
+          "answer_id": 2,
+          "text": "KCl"
+        },
+        {
+          "answer_id": 3,
+          "text": "CaCl2"
+        },
+        {
+          "answer_id": 4,
+          "text": "MgCl2"
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "contents": "1 킬로그램은 몇 그램입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "1000g"
+        },
+        {
+          "answer_id": 2,
+          "text": "100g"
+        },
+        {
+          "answer_id": 3,
+          "text": "10g"
+        },
+        {
+          "answer_id": 4,
+          "text": "1g"
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "contents": "대기 중에서 가장 많은 기체는 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "질소(N2)"
+        },
+        {
+          "answer_id": 2,
+          "text": "산소(O2)"
+        },
+        {
+          "answer_id": 3,
+          "text": "이산화탄소(CO2)"
+        },
+        {
+          "answer_id": 4,
+          "text": "아르곤(Ar)"
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "contents": "광합성에서 필요한 주요 요소는 무엇입니까?",
+      "options": [
+        {
+          "answer_id": 1,
+          "text": "햇빛"
+        },
+        {
+          "answer_id": 2,
+          "text": "물"
+        },
+        {
+          "answer_id": 3,
+          "text": "이산화탄소"
+        },
+        {
+          "answer_id": 4,
+          "text": "모두"
+        }
+      ]
+    }
+  ]
+}
