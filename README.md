@@ -1,16 +1,6 @@
-# qintproject
+Qint프로젝트의 MVVM패턴을 적용한 파일입니다.
+그 확인은 view/ProblemPage/test_screen.dart에 consumer를 이용하여 코드를 작성하였습니다.
+그리고 화면은 로그인 화면에서 로그인 버튼을 누르고 카테고리 창에서 1개 이상 선택한 다음 시작 버튼을 누르면 확인할 수 있습니다.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+하지만 제가 코드를 작성하고 확인하고 보니 RengeError가 떠서 오류를 저의 힘으로 해결해보려고 하다가 결국 오늘까지 해결하지 못했습니다.
+제가 이번 주말에 이 오류를 해결할 수 있도록 노력하겠습니다.
